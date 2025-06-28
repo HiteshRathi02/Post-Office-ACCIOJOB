@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Post Office Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="intro-panel">
+        <div class="intro-text">
+          <h2>Post Office Application</h2>
+          <p>
+            This application helps you gather information about nearby Post
+            Offices based on your location.
+          </p>
+          <p>
+            Your Current IP Address is : <span id="ip-display"></span>
+          </p>
+          <button id="get-started">Get Started</button>
+        </div>
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/007/107/296/non_2x/postman-with-letter-by-the-post-free-vector.jpg"
+          alt="Postman Image"
+          class="illustration"
+        />
+      </div>
+
+      <div class="info-panel hidden" id="info-panel">
+        <section class="user-info">
+          <p><strong>IP Address:</strong> <span id="ip-display-2"></span></p>
+          <p><strong>Lat:</strong> <span id="lat"></span></p>
+          <p><strong>Long:</strong> <span id="lon"></span></p>
+          <p><strong>City:</strong> <span id="city"></span></p>
+          <p><strong>Region:</strong> <span id="region"></span></p>
+          <p><strong>Organisation:</strong> <span id="org"></span></p>
+          <p><strong>Hostname:</strong> <span id="hostname"></span></p>
+        </section>
+
+        <section class="map-section">
+          <h3>Your Current Location</h3>
+          <iframe
+            id="map"
+            width="100%"
+            height="300"
+            style="border: 0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </section>
+
+        <section class="timezone-info">
+          <h3>More Information About You</h3>
+          <p><strong>Time Zone:</strong> <span id="timezone"></span></p>
+          <p><strong>Date And Time:</strong> <span id="time"></span></p>
+          <p><strong>Pincode:</strong> <span id="pincode"></span></p>
+          <p><strong>Message:</strong> <span id="message"></span></p>
+        </section>
+
+        <section class="post-offices-section">
+          <h3>Post Offices Near You</h3>
+          <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search by Name or Branch"
+          />
+          <div id="post-offices" class="post-office-list"></div>
+        </section>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
